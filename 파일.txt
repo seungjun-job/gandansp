@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>간단SP</title>
+  <meta name="description" content="간단SP 공식 안내 페이지. 블로그 및 오픈채팅으로 바로 이동하세요." />
+
+  <!-- 오픈그래프 (카카오/네이버 미리보기) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="간단SP" />
+  <meta property="og:description" content="블로그 및 오픈채팅 바로가기" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --card:#f9fafb;
+      --border:#e5e7eb;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",Arial;
+      background:linear-gradient(180deg,#fff 0%,#f3f4f6 100%);
+      color:var(--text);
+    }
+    .wrap{
+      max-width:720px;
+      margin:0 auto;
+      padding:48px 18px 28px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:44px;height:44px;
+      border-radius:14px;
+      background:#111827;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      font-weight:800;
+      box-shadow:var(--shadow);
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:-.5px;
+    }
+    .sub{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .card{
+      background:rgba(255,255,255,.8);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .btns{
+      display:grid;
+      gap:12px;
+      margin-top:14px;
+    }
+    a.btn{
+      text-decoration:none;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:var(--card);
+      color:var(--text);
+      font-weight:700;
+      transition:.15s;
+    }
+    a.btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 12px 28px rgba(0,0,0,.1);
+      background:#fff;
+    }
+    .pill{
+      font-size:12px;
+      padding:6px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:#fff;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .notice{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px dashed var(--border);
+      background:rgba(255,255,255,.7);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+    .foot{
+      margin-top:16px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="brand">
+      <div class="logo">SP</div>
+      <div>
+        <h1>간단SP</h1>
+        <div class="sub">원하는 곳으로 바로 이동하세요.</div>
+      </div>
+    </div>
+
+    <section class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>바로가기</strong>
+        <span class="pill">연락: 오픈채팅</span>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="https://blog.naver.com/gandansp" target="_blank">
+          <span>블로그</span>
+          <span>→</span>
+        </a>
+
+        <a class="btn" href="https://open.kakao.com/o/sagvjdqh" target="_blank">
+          <span>오픈채팅 (문의)</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="notice">
+        링크는 공식 채널로 바로 연결됩니다.  
+        변경 시 이 파일에서 URL만 수정하면 됩니다.
+      </div>
+    </section>
+
+    <div class="foot">© <span id="y"></span> 간단SP</div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
